@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Palette ESEN Ambassadors : bleu du logo (#273991) + accent or. Valeurs en canaux RGB. */
+:root {
+  --background: 247 248 252;
+  --surface: 255 255 255;
+  --foreground: 14 19 48;
+  --muted: 82 90 125;
+  --border: 224 228 243;
+  --primary: 39 57 145;
+  --primary-fg: 255 255 255;
+  --accent: 184 131 47;
+  /* Hero : projecteur et réseau de points */
+  --spot: 39 57 145;
+  --spot-alpha: 0.12;
+  --net: 39 57 145;
+  --net-accent: 184 131 47;
+}
+
+.dark {
+  --spot: 91 115 232;
+  --spot-alpha: 0.28;
+  --net: 143 162 240;
+  --net-accent: 230 184 102;
+  --background: 10 14 31;
+  --surface: 18 24 51;
+  --foreground: 230 233 247;
+  --muted: 154 163 199;
+  --border: 36 44 84;
+  --primary: 91 115 232;
+  --primary-fg: 255 255 255;
+  --accent: 230 184 102;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
